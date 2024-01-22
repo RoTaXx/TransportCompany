@@ -46,6 +46,10 @@ public class Client {
         this.transport = transport;
     }
 
+    public Client() {
+
+    }
+
     public long getClient_id() {
         return client_id;
     }
