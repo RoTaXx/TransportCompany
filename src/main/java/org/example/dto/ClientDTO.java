@@ -14,12 +14,25 @@ public class ClientDTO {
     public ClientDTO() {
     }
 
+    public ClientDTO(long client_id, String firstName, String lastName) {
+        this.client_id = client_id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public ClientDTO(long client_id, String firstName, String lastName, boolean hasPaid, Transport transport) {
         this.client_id = client_id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.hasPaid = hasPaid;
         this.transport = transport;
+    }
+
+    public ClientDTO(long client_id, String firstName, String lastName, boolean hasPaid) {
+        this.client_id = client_id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.hasPaid = hasPaid;
     }
 
     @Override

@@ -21,6 +21,11 @@ public class VehicleDTO {
         this.transportCompany = transportCompany;
     }
 
+    public VehicleDTO(long vehicle_id, VehicleType vehicleType) {
+        this.vehicle_id = vehicle_id;
+        this.vehicleType = vehicleType;
+    }
+
     @Override
     public String toString() {
         return "VehicleDTO{" +

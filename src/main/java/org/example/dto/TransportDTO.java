@@ -34,6 +34,17 @@ public class TransportDTO {
         this.employee = employee;
     }
 
+    public TransportDTO(long transport_id, String startingPoint, String destinationPoint, LocalDate startDate, LocalDate endDate, BigDecimal transport_weight, BigDecimal transport_price, TransportationType transportationType) {
+        this.transport_id = transport_id;
+        this.startingPoint = startingPoint;
+        this.destinationPoint = destinationPoint;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.transport_weight = transport_weight;
+        this.transport_price = transport_price;
+        this.transportationType = transportationType;
+    }
+
     @Override
     public String toString() {
         return "TransportDTO{" +
