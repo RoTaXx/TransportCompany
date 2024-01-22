@@ -27,6 +27,14 @@ public class EmployeeDTO {
         this.transportCompany = transportCompany;
     }
 
+    public EmployeeDTO(long employee_id, String firstName, String lastName, EmployeeQualification employeeQualification, BigDecimal employee_salary) {
+        this.employee_id = employee_id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.employeeQualification = employeeQualification;
+        this.employee_salary = employee_salary;
+    }
+
     @Override
     public String toString() {
         return "EmployeeDTO{" +
