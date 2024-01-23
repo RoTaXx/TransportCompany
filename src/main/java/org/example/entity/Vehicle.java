@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table
+@Table(name = "vehicle")
 public class Vehicle {
 
     @Id
@@ -27,6 +27,8 @@ public class Vehicle {
         this.vehicleType = vehicleType;
         this.transportCompany = transportCompany;
     }
+
+
 
     public Vehicle(long vehicle_id, VehicleType vehicleType) {
         this.vehicle_id = vehicle_id;

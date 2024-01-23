@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name = "trip")
+@Table(name = "transport")
 public class Transport {
 
     @Id
@@ -61,7 +61,7 @@ public class Transport {
     @ManyToOne(fetch = FetchType.LAZY)
     private Employee employee;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "transport")
     private List<Client> clients;
 
     @ManyToOne(fetch = FetchType.LAZY)
