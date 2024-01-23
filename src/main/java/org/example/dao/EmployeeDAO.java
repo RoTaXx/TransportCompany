@@ -57,16 +57,6 @@ public class EmployeeDAO {
         }
     }
 
-    public static Employee loadEmployee (int id) {
-        Transaction transaction;
-        Employee employee;
-        try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
-            transaction = session.beginTransaction();
-            employee = session.load(Employee.class, id);
-            transaction.commit();
-        }
-        return employee;
-    }
 
     public static Employee getEmployeeById (int id) {
         Transaction transaction;

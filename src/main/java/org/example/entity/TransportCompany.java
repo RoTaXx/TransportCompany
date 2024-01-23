@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "company")
+@Table(name = "transportCompany")
 public class TransportCompany {
 
     @Id
@@ -33,7 +33,7 @@ public class TransportCompany {
     @OneToMany(mappedBy = "transportCompany", cascade = CascadeType.ALL)
     private List<Employee> employees;
 
-    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "transportCompany", cascade = CascadeType.ALL)
     private List<Transport> transports;
 
     @ManyToMany
@@ -41,6 +41,12 @@ public class TransportCompany {
 
     public TransportCompany() {
 
+    }
+
+    public TransportCompany(long company_id, String name, BigDecimal income) {
+        this.company_id = company_id;
+        this.name = name;
+        this.income = income;
     }
 
     public TransportCompany(long company_id, String name, BigDecimal income, List<Vehicle> vehicles, List<Employee> employees, List<Transport> transports, List<Client> clients) {

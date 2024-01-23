@@ -38,10 +38,10 @@ public class Employee {
     @Column(name="employee_salary", nullable = false)
     private BigDecimal employee_salary;
 
-    @ManyToOne (fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     private TransportCompany transportCompany;
 
-    @OneToMany (fetch = FetchType.LAZY)
+    @OneToMany (mappedBy = "employee")
     private List<Transport> transports;
 
     public Employee(long employee_id, List<Transport> transports) {
