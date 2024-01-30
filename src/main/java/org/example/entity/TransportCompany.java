@@ -49,6 +49,11 @@ public class TransportCompany {
         this.income = income;
     }
 
+    public TransportCompany(String name, BigDecimal income) {
+        this.name = name;
+        this.income = income;
+    }
+
     public TransportCompany(long company_id, String name, BigDecimal income, List<Vehicle> vehicles, List<Employee> employees, List<Transport> transports, List<Client> clients) {
         this.company_id = company_id;
         this.name = name;

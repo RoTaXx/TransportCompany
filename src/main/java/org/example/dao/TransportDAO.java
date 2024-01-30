@@ -82,7 +82,7 @@ public class TransportDAO {
         }
     }
 
-    public static List<Transport> sortDeliveriesByDestination(){
+    public static List<Transport> sortTransportByDestination(){
         try(Session session = SessionFactoryUtil.getSessionFactory().openSession()){
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<Transport> cr = cb.createQuery(Transport.class);
