@@ -32,7 +32,7 @@ public class EmployeeDAO {
         }
     }
 
-    public static Employee getEmployee(int id) {
+    public static Employee getEmployee(long id) {
         Transaction transaction;
         Employee employee;
         try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {

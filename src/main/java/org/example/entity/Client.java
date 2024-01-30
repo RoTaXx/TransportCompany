@@ -46,6 +46,13 @@ public class Client {
         this.transport = transport;
     }
 
+    public Client(long client_id, String firstName, String lastName, boolean hasPaid) {
+        this.client_id = client_id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.hasPaid = hasPaid;
+    }
+
     public Client() {
 
     }
